@@ -50,3 +50,5 @@ int main(int argc, char* argv[])
 
 
 `connect(&my_sender, &sender::my_signal, &my_receiver, &receiver::on_message_received)`相当于向`my_sender->slots_for_my_signal`中`emplace_back()` `my_receiver`的`on_message_received()`成员函数。
+
+Qt中的connect还可以指定第五个参数，使得槽函数只被绑定一次，或只触发一次。
